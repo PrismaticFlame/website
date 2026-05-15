@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 900">
+  <defs>
+    <linearGradient id="barGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="89%" stop-color="#f59e0b"/>
+      <stop offset="89%" stop-color="#1e293b"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="600" height="900" fill="#0f172a"/>
+  <rect x="0" y="0" width="600" height="5" fill="#f59e0b"/>
+
+  <text x="300" y="68" text-anchor="middle" fill="#334155"
+        font-family="monospace" font-size="13" letter-spacing="4">NLP · CLASSIFIER</text>
+
+  <!-- Input box -->
+  <rect x="50" y="90" width="500" height="230" rx="8"
+        fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="70" y="118" fill="#475569" font-family="monospace" font-size="11" letter-spacing="3">INPUT</text>
+  <line x1="50" y1="128" x2="550" y2="128" stroke="#334155" stroke-width="1"/>
+
+  <text x="75" y="185" fill="#cbd5e1" font-family="Georgia, serif" font-size="27">"Oh wow, what a</text>
+
+  <rect x="73" y="200" width="88" height="37" rx="4" fill="#f59e0b" opacity="0.2"/>
+  <rect x="73" y="200" width="88" height="37" rx="4" fill="none" stroke="#f59e0b" stroke-width="1.5"/>
+  <text y="228" font-family="Georgia, serif" font-size="27">
+    <tspan x="78" fill="#fbbf24" font-weight="bold">great</tspan>
+    <tspan fill="#cbd5e1"> idea."</tspan>
+  </text>
+
+  <text x="75" y="290" fill="#475569" font-family="monospace" font-size="12">
+    — user input, 2024
+  </text>
+
+  <!-- Prediction box -->
+  <rect x="50" y="345" width="500" height="160" rx="8"
+        fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="70" y="373" fill="#475569" font-family="monospace" font-size="11" letter-spacing="3">PREDICTION</text>
+  <line x1="50" y1="383" x2="550" y2="383" stroke="#334155" stroke-width="1"/>
+
+  <text x="75" y="425" fill="#f59e0b" font-family="monospace" font-size="21" font-weight="bold">▲ SARCASM DETECTED</text>
+
+  <text x="75" y="455" fill="#475569" font-family="monospace" font-size="11" letter-spacing="2">confidence</text>
+  <rect x="75" y="462" width="400" height="9" rx="4" fill="#0f172a"/>
+  <rect x="75" y="462" width="356" height="9" rx="4" fill="#f59e0b"/>
+  <text x="488" y="473" fill="#f59e0b" font-family="monospace" font-size="13" font-weight="bold">89%</text>
+
+  <line x1="50" y1="545" x2="550" y2="545" stroke="#1e293b" stroke-width="1"/>
+
+  <!-- Python badge -->
+  <circle cx="155" cy="645" r="58" fill="#1e293b" stroke="#3d6a9e" stroke-width="2"/>
+  <text x="155" y="637" text-anchor="middle" fill="#4584b6"
+        font-family="monospace" font-size="22" font-weight="bold">Py</text>
+  <text x="155" y="659" text-anchor="middle" fill="#ffde57"
+        font-family="monospace" font-size="11">Python</text>
+
+  <!-- HuggingFace badge (drawn face) -->
+  <circle cx="300" cy="645" r="58" fill="#1e293b" stroke="#b8960c" stroke-width="2"/>
+  <circle cx="300" cy="628" r="28" fill="#FFD21E"/>
+  <circle cx="289" cy="622" r="3.5" fill="#0f172a"/>
+  <circle cx="311" cy="622" r="3.5" fill="#0f172a"/>
+  <path d="M 288 636 Q 300 645 312 636" stroke="#0f172a" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <text x="300" y="682" text-anchor="middle" fill="#FFD21E"
+        font-family="monospace" font-size="10">HuggingFace</text>
+
+  <!-- Transformers badge -->
+  <circle cx="445" cy="645" r="58" fill="#1e293b" stroke="#6d28d9" stroke-width="2"/>
+  <text x="445" y="661" text-anchor="middle" fill="#a855f7"
+        font-family="monospace" font-size="42" font-weight="bold">T</text>
+  <text x="445" y="682" text-anchor="middle" fill="#6d28d9"
+        font-family="monospace" font-size="10">Transformers</text>
+
+  <text x="300" y="790" text-anchor="middle" fill="#1e293b"
+        font-family="monospace" font-size="12" letter-spacing="3">BERT · RoBERTa · LLaMA</text>
+</svg>

@@ -40,65 +40,14 @@ h2.about {
 }
 
 .project-tile {
-    min-width: calc((100% - (4 * 12px)) / 7);  /* 5 tiles, 4 gaps between*/
-    height: 500px;
+    min-width: calc((100% - (4 * 12px)) / 7);
     box-sizing: border-box;
-    border: 1px solid #333;
-    border-radius: 4px;
-    padding: 16px;
     cursor: pointer;
     display: flex;
     flex-direction: column;
-    position: relative;
-    isolation: isolate;
-    transition: color 0.5s;
+    overflow: hidden;
 }
 
-.project-tile > * {
-    z-index: 1;
-}
-
-.project-tile::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-image: var(--bg-image);
-    background-size: var(--bg-size, cover);
-    background-position: var(--bg-position, center);
-    background-repeat: no-repeat;
-    opacity: 0.8;
-    transition: opacity 0.5s, transform 0.5s;
-    z-index: 0;
-}
-
-.project-tile:hover::before {
-    opacity: 0.95;
-    transform: scale(1.05);
-}
-
-.project-tile::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    border-radius: 4px;
-    background:
-        linear-gradient(to right,  #333 0, transparent 20px),
-        linear-gradient(to left,   #333 0, transparent 20px),
-        linear-gradient(to bottom, #333 0, transparent 20px),
-        linear-gradient(to top,    #333 0, transparent 20px);
-    opacity: 0;
-    transition: opacity 0.5s;
-    pointer-events: none;
-    z-index: 0;
-}
-
-.project-tile:hover {
-    color: #fff;
-}
-
-.project-tile:hover::after {
-    opacity: 1;
-}
 
 .carousel-btn {
     background: #f0f0f0;
@@ -128,16 +77,117 @@ h2.about {
 .tag-library   { background-color: #c8b898; }
 .tag-tool      { background-color: #c9a8a8; }
 
-.tile-image {
+.tile-banner {
+    position: relative;
+    overflow: hidden;
+    height: 500px;
+    background-color: #e0e0e0;
+    flex-shrink: 0;
+}
+
+.tile-banner::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: var(--bg-image);
+    background-size: var(--bg-size, cover);
+    background-position: var(--bg-position, center);
+    background-repeat: no-repeat;
+    opacity: var(--bg-opacity, 0.8);
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+.tile-banner--card,
+.tile-banner--centered {
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    padding: 24px;
+    transition: transform 0.5s;
+}
+
+.project-tile:hover .tile-banner--card,
+.project-tile:hover .tile-banner--centered {
+    transform: scale(1.05);
+}
+
+.banner-icon-img {
+    height: 1em;
+    width: auto;
+}
+
+.tile-banner--card > *,
+.tile-banner--centered > *,
+.tile-banner--layered > * {
+    position: relative;
+    z-index: 1;
+}
+
+.tile-banner--layered {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 20px;
+    gap: 12px;
+}
+
+.banner-logo {
+    width: 55%;
+    height: auto;
+}
+
+.banner-title {
+    font-size: 2.4em;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
+    margin-top: auto;
+    padding-bottom: 20px;
+}
+
+.banner-sentence {
+    font-family: Georgia, serif;
+    font-size: 1.3em;
+    text-align: center;
+    color: #333;
+}
+
+.banner-confidence {
+    font-family: monospace;
+    font-size: 0.9em;
+    color: #888;
+}
+
+.banner-icons {
+    display: flex;
+    gap: 16px;
+    font-size: 3em;
+}
+
+.tile-banner--centered > i {
+    font-size: 9em;
+}
+
+.project-tile:hover .tile-banner::before {
+    transform: scale(1.05);
+    opacity: 0.95;
+}
+
+.tile-content {
+    padding: 12px 16px;
+    flex: 1;
+}
+
+.tile-icons {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
-    font-size: 2em;
-    margin-top: auto;
-}
-
-.project-tile {
-    overflow: hidden;
+    font-size: 1.5em;
+    margin-top: 8px;
 }
 
 .project-tile:hover .tag {

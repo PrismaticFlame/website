@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 900">
+  <defs>
+    <linearGradient id="flameGrad" x1="40%" y1="0%" x2="60%" y2="100%">
+      <stop offset="0%" stop-color="#FF8C42"/>
+      <stop offset="100%" stop-color="#CC2200"/>
+    </linearGradient>
+    <filter id="glow" x="-25%" y="-25%" width="150%" height="150%">
+      <feGaussianBlur stdDeviation="10" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="600" height="900" fill="#0f172a"/>
+
+  <!-- Subtle background warmth behind flame -->
+  <ellipse cx="300" cy="390" rx="210" ry="270" fill="#EE4C2C" opacity="0.07"/>
+
+  <!-- PyTorch flame (fill-rule evenodd punches out the circle) -->
+  <path fill-rule="evenodd"
+        d="M 295 655
+           C 190 645, 128 552, 143 442
+           C 158 322, 218 198, 293 98
+           C 313 78, 343 84, 360 112
+           C 418 188, 450 322, 436 442
+           C 423 542, 382 622, 295 655 Z
+           M 290 490
+           m 92 0
+           a 92 92 0 1 0 -184 0
+           a 92 92 0 1 0 184 0"
+        fill="url(#flameGrad)"
+        filter="url(#glow)"/>
+
+  <!-- PyTorch wordmark -->
+  <text x="300" y="748" text-anchor="middle"
+        fill="#EE4C2C" font-family="Arial, sans-serif"
+        font-size="54" font-weight="bold" letter-spacing="1">PyTorch</text>
+
+  <text x="300" y="800" text-anchor="middle"
+        fill="#334155" font-family="monospace"
+        font-size="13" letter-spacing="5">OPEN SOURCE TUTORIALS</text>
+</svg>
