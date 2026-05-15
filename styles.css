@@ -41,17 +41,63 @@ h2.about {
 
 .project-tile {
     min-width: calc((100% - (4 * 12px)) / 7);  /* 5 tiles, 4 gaps between*/
-    height: 500px; /* adjust to taste */
+    height: 500px;
     box-sizing: border-box;
     border: 1px solid #333;
     border-radius: 4px;
     padding: 16px;
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    isolation: isolate;
+    transition: color 0.5s;
+}
+
+.project-tile > * {
+    z-index: 1;
+}
+
+.project-tile::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: var(--bg-image);
+    background-size: var(--bg-size, cover);
+    background-position: var(--bg-position, center);
+    background-repeat: no-repeat;
+    opacity: 0.8;
+    transition: opacity 0.5s, transform 0.5s;
+    z-index: 0;
+}
+
+.project-tile:hover::before {
+    opacity: 0.95;
+    transform: scale(1.05);
+}
+
+.project-tile::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 4px;
+    background:
+        linear-gradient(to right,  #333 0, transparent 20px),
+        linear-gradient(to left,   #333 0, transparent 20px),
+        linear-gradient(to bottom, #333 0, transparent 20px),
+        linear-gradient(to top,    #333 0, transparent 20px);
+    opacity: 0;
+    transition: opacity 0.5s;
+    pointer-events: none;
+    z-index: 0;
 }
 
 .project-tile:hover {
-    background: #333;
     color: #fff;
+}
+
+.project-tile:hover::after {
+    opacity: 1;
 }
 
 .carousel-btn {
@@ -80,6 +126,19 @@ h2.about {
 .tag-language  { background-color: #a8b4cc; }
 .tag-framework { background-color: #9fb89f; }
 .tag-library   { background-color: #c8b898; }
+.tag-tool      { background-color: #c9a8a8; }
+
+.tile-image {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-size: 2em;
+    margin-top: auto;
+}
+
+.project-tile {
+    overflow: hidden;
+}
 
 .project-tile:hover .tag {
     background-color: #555;
@@ -109,6 +168,7 @@ h2.about {
     background-color: #fff;
     border-radius: 4px;
     padding: 32px;
-    max-width: 600px;
+    height: 500px;
+    max-width: 1000px;
     width: 90%;
 }

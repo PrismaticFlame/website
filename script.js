@@ -10,10 +10,12 @@ document.querySelectorAll('.project-tile').forEach(tile => {
         modalDescription.textContent = tile.dataset.description;
 
         modalTags.innerHTML = '';
-        tile.querySelectorAll('.tag').forEach(tag => {
+        (tile.dataset.tags || '').split('|').forEach(entry => {
+            const [name, type] = entry.split(':');
+            if (!name) return;
             const span = document.createElement('span');
-            span.className = 'tag';
-            span.textContent = tag.textContent;
+            span.className = `tag tag-${type}`;
+            span.textContent = name;
             modalTags.appendChild(span);
         });
 
