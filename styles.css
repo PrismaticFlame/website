@@ -1,25 +1,128 @@
 
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #150f0a;
+    color: #f0ece4;
+}
+
 header {
     text-align: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+}
+
+h1 {
+    font-size: 5em;
+    font-weight: 700;
+    letter-spacing: 0.03em;
 }
 
 a.page-button {
-    display: inline-block;       /* Creates the button zone */
-    padding: 8px 16px;           /* Changes the size of the button zone */
-    border: 2px solid #333;    /* Outlines the button zone to make it look more button-like */
-    border-radius: 4px;          /* Rounds the corners of the button zone */
-    text-decoration: none;       /* Just makes it plain text, and in this case removes the underline */
-    color: #333;               /* Makes text color [black] (?)*/
-    background-color: #f0f0f0; /* Makes background of button zone [white]*/
+    display: inline-block;
+    padding: 8px 16px;
+    border: 2px solid #3a2e22;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #f0ece4;
+    background-color: #1e1610;
+    transition: background-color 0.2s, color 0.2s;
 }
 
 a.page-button:hover {
-    background: #333;
-    color: #fff;
+    background: #f0ece4;
+    color: #150f0a;
 }
 
-h2.about {
+h2 {
+    font-size: 3em;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
     text-align: center;
+    margin-bottom: 48px;
+    position: relative;
+}
+
+/* h2::after {
+    content: '';
+    position: absolute;
+    bottom: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background-color: #c8b898;
+    border-radius: 2px;
+} */
+
+section {
+    padding: 80px 60px;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    padding: 40px 20px 48px;
+}
+
+.hero-tagline {
+    font-size: 1.9em;
+    font-weight: 400;
+    color: #b0acaa;
+    letter-spacing: 0.02em;
+}
+
+.hero-chips {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+}
+
+.hero-chip {
+    padding: 10px 26px;
+    border-radius: 24px;
+    font-size: 1.05em;
+    font-weight: 500;
+    color: #333;
+    letter-spacing: 0.01em;
+}
+
+.hero-status {
+    font-size: 1.05em;
+    color: #7a6e62;
+    letter-spacing: 0.04em;
+}
+
+.hero-links {
+    display: flex;
+    gap: 14px;
+}
+
+.hero-link {
+    display: inline-block;
+    padding: 12px 28px;
+    border: 2px solid #3a2e22;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #f0ece4;
+    background-color: #1e1610;
+    font-size: 1em;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.hero-link:hover {
+    background-color: #f0ece4;
+    color: #150f0a;
 }
 
 .carousel-container {
@@ -48,28 +151,35 @@ h2.about {
     overflow: hidden;
 }
 
-
 .carousel-btn {
-    background: #f0f0f0;
-    border: 2px solid #333;
+    background: #1e1610;
+    border: 2px solid #3a2e22;
     border-radius: 4px;
     font-size: 2em;
     cursor: pointer;
     padding: 0 12px;
     line-height: 1;
+    color: #f0ece4;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.carousel-btn:hover {
+    background: #f0ece4;
+    color: #150f0a;
 }
 
 .stack-tags {
-    display: flex;                   /* allows the tags to be bigger and push each other around */
-    flex-wrap: wrap;                 /* if too many tags on one line, go to next line (wrap) */
+    display: flex;
+    flex-wrap: wrap;
     gap: 6px;
-    margin-top: 8px;                 /* if wrapped to next line, allow head room */
+    margin-top: 8px;
 }
 
 .tag {
     border-radius: 4px;
     padding: 2px 8px;
     font-size: 0.8em;
+    color: #222;
 }
 
 .tag-language  { background-color: #a8b4cc; }
@@ -81,7 +191,7 @@ h2.about {
     position: relative;
     overflow: hidden;
     height: 500px;
-    background-color: #e0e0e0;
+    background-color: transparent;
     flex-shrink: 0;
 }
 
@@ -99,7 +209,7 @@ h2.about {
 
 .tile-banner--card,
 .tile-banner--centered {
-    background: #ffffff;
+    background: #1e1610;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -133,6 +243,15 @@ h2.about {
     justify-content: flex-start;
     padding-top: 20px;
     gap: 12px;
+    transition: transform 0.5s;
+}
+
+.project-tile:hover .tile-banner--layered {
+    transform: scale(1.05);
+}
+
+.project-tile:hover .tile-banner--layered::before {
+    transform: scale(1);
 }
 
 .banner-logo {
@@ -153,13 +272,13 @@ h2.about {
     font-family: Georgia, serif;
     font-size: 1.3em;
     text-align: center;
-    color: #333;
+    color: #f0ece4;
 }
 
 .banner-confidence {
     font-family: monospace;
     font-size: 0.9em;
-    color: #888;
+    color: #6e6e7e;
 }
 
 .banner-icons {
@@ -191,8 +310,56 @@ h2.about {
 }
 
 .project-tile:hover .tag {
-    background-color: #555;
-    color: #fff;
+    background-color: #4a3828;
+    color: #f0ece4;
+}
+
+@keyframes quantum-flow {
+    0%   { background-position: 0% 50%; }
+    50%  { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.superposition-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+    margin-bottom: 8px;
+}
+
+.superposition-gradient {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        135deg,
+        rgba(200, 0, 60, 0.55),
+        rgba(120, 0, 210, 0.55),
+        rgba(20, 0, 220, 0.55),
+        rgba(120, 0, 210, 0.55),
+        rgba(200, 0, 60, 0.55)
+    );
+    background-size: 300% 300%;
+    animation: quantum-flow 4s ease infinite;
+    transition: opacity 0.8s;
+    pointer-events: none;
+}
+
+.superposition-cycling-title {
+    font-size: 1.17em;
+    font-weight: bold;
+    margin: 0;
+    padding: 6px 4px;
+    transition: opacity 0.5s;
+    position: relative;
+    z-index: 1;
+}
+
+.superposition-real-title {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s;
+    margin: 0;
+    padding: 6px 4px;
 }
 
 .hidden {
@@ -205,7 +372,7 @@ h2.about {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 #modal-overlay:not(.hidden) {
@@ -215,7 +382,8 @@ h2.about {
 }
 
 #modal {
-    background-color: #fff;
+    background-color: #1e1610;
+    border: 1px solid #3a2e22;
     border-radius: 4px;
     padding: 32px;
     height: 500px;

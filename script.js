@@ -67,3 +67,64 @@ nextBtn.addEventListener('click', () => {
         updateCarousel();
     }
 });
+
+// --- Quantum Superposition: QEC Tile ---
+const qecTile = document.getElementById('qec-tile');
+const qecGradient = qecTile.querySelector('.superposition-gradient');
+const qecCyclingTitle = qecTile.querySelector('.superposition-cycling-title');
+const qecRealTitle = qecTile.querySelector('.superposition-real-title');
+
+const superpositionTitles = [
+    'Surface Code Stabilizer',
+    'Syndrome Measurement Active',
+    '|0⟩ + |1⟩ Neural Decoder',
+    'Decoherence Threshold Analysis'
+];
+
+let qecIndex = 0;
+let qecCollapsed = false;
+
+const qecInterval = setInterval(() => {
+    qecCyclingTitle.style.opacity = '0';
+    setTimeout(() => {
+        qecIndex = (qecIndex + 1) % superpositionTitles.length;
+        qecCyclingTitle.textContent = superpositionTitles[qecIndex];
+        qecCyclingTitle.style.opacity = '1';
+    }, 500);
+}, 2500);
+
+function playCollapseSound() {
+    const ctx = new (window.AudioContext || window.webkitAudioContext)();
+    const osc = ctx.createOscillator();
+    const gain = ctx.createGain();
+    osc.connect(gain);
+    gain.connect(ctx.destination);
+    osc.type = 'sine';
+    osc.frequency.setValueAtTime(440, ctx.currentTime);
+    osc.frequency.exponentialRampToValueAtTime(110, ctx.currentTime + 0.4);
+    gain.gain.setValueAtTime(0.1, ctx.currentTime);
+    gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.5);
+    osc.start(ctx.currentTime);
+    osc.stop(ctx.currentTime + 0.5);
+}
+
+function collapseWaveFunction() {
+    if (qecCollapsed) return;
+    qecCollapsed = true;
+    clearInterval(qecInterval);
+    playCollapseSound();
+
+    qecGradient.style.opacity = '0';
+    qecCyclingTitle.style.opacity = '0';
+
+    setTimeout(() => {
+        qecGradient.style.animation = 'none';
+        qecCyclingTitle.style.display = 'none';
+        qecRealTitle.style.display = 'block';
+        requestAnimationFrame(() => requestAnimationFrame(() => {
+            qecRealTitle.style.opacity = '1';
+        }));
+    }, 500);
+}
+
+qecTile.addEventListener('mouseenter', collapseWaveFunction);
