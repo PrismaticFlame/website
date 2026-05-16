@@ -4,8 +4,8 @@
 }
 
 body {
-    background-color: #150f0a;
-    color: #f0ece4;
+    background-color: #F5F4EC;
+    color: #1e2a1a;
     font-family: 'Lexend', sans-serif;
 }
 
@@ -28,17 +28,18 @@ h1 {
 a.page-button {
     display: inline-block;
     padding: 8px 16px;
-    border: 2px solid #3a2e22;
+    border: 2px solid #6F826A;
     border-radius: 4px;
     text-decoration: none;
-    color: #f0ece4;
-    background-color: #1e1610;
-    transition: background-color 0.2s, color 0.2s;
+    color: #1e2a1a;
+    background-color: #FAFAF2;
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s;
 }
 
 a.page-button:hover {
-    background: #f0ece4;
-    color: #150f0a;
+    background: #BF9264;
+    border-color: #BF9264;
+    color: #FAFAF2;
 }
 
 h2 {
@@ -83,9 +84,9 @@ section {
     min-height: 100vh;
 }
 
-#about     { background-color: #1c1208; }
-#education { background-color: #0d1318; }
-#experience { background-color: #101a10; }
+#about      { background-color: #FDFCF4; }
+#education  { background-color: #EEF5E8; }
+#experience { background-color: #F5F6E2; }
 
 .hero-section--left  { flex-direction: row; }
 .hero-section--right { flex-direction: row-reverse; }
@@ -103,14 +104,14 @@ section {
 .hero-section__text h3 {
     font-size: 1.1em;
     font-weight: 500;
-    color: #b0acaa;
+    color: #6F826A;
     margin-bottom: 16px;
 }
 
 .hero-section__text p {
     font-size: 1.1em;
     line-height: 1.8;
-    color: #c8c4bc;
+    color: #4a5e46;
     max-width: 55ch;
 }
 
@@ -124,12 +125,12 @@ section {
 .media-placeholder {
     width: 100%;
     aspect-ratio: 4 / 3;
-    border: 2px dashed #3a2e22;
+    border: 2px dashed #C8D0A8;
     border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #4a3828;
+    color: #BF9264;
     font-size: 1.1em;
     letter-spacing: 0.08em;
 }
@@ -169,11 +170,11 @@ section {
     align-items: center;
     justify-content: center;
     border-radius: 12px;
-    background-color: #1e1a14;
-    border: 1px solid #3a2e22;
+    background-color: #E8EDD8;
+    border: 1px solid #C8D0A8;
     font-size: 1.2em;
     font-weight: 600;
-    color: #7a6e62;
+    color: #8a9e80;
     letter-spacing: 0.05em;
 }
 
@@ -186,19 +187,19 @@ section {
 .edu-degree {
     font-size: 1.3em;
     font-weight: 600;
-    color: #f0ece4;
+    color: #1e2a1a;
 }
 
 .edu-school {
     font-size: 1em;
-    color: #7a6e62;
+    color: #8a9e80;
     letter-spacing: 0.02em;
 }
 
 .edu-year {
     font-size: 1.2em;
     font-weight: 300;
-    color: #b0acaa;
+    color: #6F826A;
     letter-spacing: 0.04em;
     white-space: nowrap;
 }
@@ -214,7 +215,7 @@ section {
 .hero-tagline {
     font-size: 1.9em;
     font-weight: 400;
-    color: #b0acaa;
+    color: #6F826A;
     letter-spacing: 0.02em;
 }
 
@@ -236,7 +237,7 @@ section {
 
 .hero-status {
     font-size: 1.05em;
-    color: #7a6e62;
+    color: #8a9e80;
     letter-spacing: 0.04em;
 }
 
@@ -248,18 +249,19 @@ section {
 .hero-link {
     display: inline-block;
     padding: 12px 28px;
-    border: 2px solid #3a2e22;
+    border: 2px solid #6F826A;
     border-radius: 4px;
     text-decoration: none;
-    color: #f0ece4;
-    background-color: #1e1610;
+    color: #1e2a1a;
+    background-color: #FAFAF2;
     font-size: 1em;
-    transition: background-color 0.2s, color 0.2s;
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s;
 }
 
 .hero-link:hover {
-    background-color: #f0ece4;
-    color: #150f0a;
+    background-color: #BF9264;
+    border-color: #BF9264;
+    color: #FAFAF2;
 }
 
 .carousel-container {
@@ -289,20 +291,21 @@ section {
 }
 
 .carousel-btn {
-    background: #1e1610;
-    border: 2px solid #3a2e22;
+    background: #FAFAF2;
+    border: 2px solid #6F826A;
     border-radius: 4px;
     font-size: 2em;
     cursor: pointer;
     padding: 0 12px;
     line-height: 1;
-    color: #f0ece4;
-    transition: background-color 0.2s, color 0.2s;
+    color: #1e2a1a;
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s;
 }
 
 .carousel-btn:hover {
-    background: #f0ece4;
-    color: #150f0a;
+    background: #BF9264;
+    border-color: #BF9264;
+    color: #FAFAF2;
 }
 
 .stack-tags {
@@ -321,8 +324,8 @@ section {
 
 .tag-language  { background-color: #a8b4cc; }
 .tag-framework { background-color: #9fb89f; }
-.tag-library   { background-color: #c8b898; }
-.tag-tool      { background-color: #c9a8a8; }
+.tag-library   { background-color: #9fb0bc; }
+.tag-tool      { background-color: #a4a8bc; }
 
 .tile-banner {
     position: relative;
@@ -346,7 +349,7 @@ section {
 
 .tile-banner--card,
 .tile-banner--centered {
-    background: #1e1610;
+    background: #FAFAF2;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -409,13 +412,13 @@ section {
     font-family: Georgia, serif;
     font-size: 1.3em;
     text-align: center;
-    color: #f0ece4;
+    color: #1e2a1a;
 }
 
 .banner-confidence {
     font-family: monospace;
     font-size: 0.9em;
-    color: #6e6e7e;
+    color: #8a9e80;
 }
 
 .banner-icons {
@@ -438,6 +441,10 @@ section {
     flex: 1;
 }
 
+.tile-content h3 {
+    margin-top: 0;
+}
+
 .tile-icons {
     display: flex;
     flex-wrap: wrap;
@@ -447,8 +454,8 @@ section {
 }
 
 .project-tile:hover .tag {
-    background-color: #4a3828;
-    color: #f0ece4;
+    background-color: #BF9264;
+    color: #1e2a1a;
 }
 
 @keyframes quantum-flow {
@@ -485,7 +492,7 @@ section {
     font-size: 1.17em;
     font-weight: bold;
     margin: 0;
-    padding: 6px 4px;
+    padding: 0 4px 6px 4px;
     transition: opacity 0.5s;
     position: relative;
     z-index: 1;
@@ -496,7 +503,7 @@ section {
     opacity: 0;
     transition: opacity 0.5s;
     margin: 0;
-    padding: 6px 4px;
+    padding: 0 4px 6px 4px;
 }
 
 .hidden {
@@ -527,11 +534,12 @@ section {
 }
 
 #modal {
-    background-color: #1e1610;
-    border: 1px solid #3a2e22;
+    background-color: #FAFAF2;
+    border: 1px solid #C8D0A8;
     border-radius: 4px;
     padding: 32px;
     height: 500px;
+    color: #1e2a1a;
     max-width: 1000px;
     width: 90%;
 }
