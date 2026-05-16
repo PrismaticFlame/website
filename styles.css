@@ -6,6 +6,7 @@
 body {
     background-color: #150f0a;
     color: #f0ece4;
+    font-family: 'Lexend', sans-serif;
 }
 
 header {
@@ -50,6 +51,12 @@ h2 {
     position: relative;
 }
 
+.hero-section h2 {
+    text-align: left;
+    font-size: 3.5em;
+    margin-bottom: 24px;
+}
+
 /* h2::after {
     content: '';
     position: absolute;
@@ -64,6 +71,93 @@ h2 {
 
 section {
     padding: 80px 60px;
+}
+
+/* ── Hero sections: About / Education / Experience ── */
+
+.hero-section {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    padding: 120px 10%;
+    min-height: 100vh;
+}
+
+#about     { background-color: #1c1208; }
+#education { background-color: #0d1318; }
+#experience { background-color: #101a10; }
+
+.hero-section--left  { flex-direction: row; }
+.hero-section--right { flex-direction: row-reverse; }
+
+.hero-section__text {
+    flex: 1;
+}
+
+.hero-section__text h2 {
+    text-align: left;
+    font-size: 3.5em;
+    margin-bottom: 24px;
+}
+
+.hero-section__text h3 {
+    font-size: 1.1em;
+    font-weight: 500;
+    color: #b0acaa;
+    margin-bottom: 16px;
+}
+
+.hero-section__text p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    color: #c8c4bc;
+    max-width: 55ch;
+}
+
+.hero-section__media {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.media-placeholder {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    border: 2px dashed #3a2e22;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #4a3828;
+    font-size: 1.1em;
+    letter-spacing: 0.08em;
+}
+
+/* Education table */
+.edu-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95em;
+}
+
+.edu-table th,
+.edu-table td {
+    padding: 14px 18px;
+    text-align: left;
+    border-bottom: 1px solid #2a2018;
+}
+
+.edu-table thead th {
+    color: #7a6e62;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    font-size: 0.8em;
+}
+
+.edu-table tbody tr:hover {
+    background-color: #1a160e;
 }
 
 .hero {
@@ -364,6 +458,13 @@ section {
 
 .hidden {
     display: none;
+}
+
+.yt-embed {
+    width: 100%;
+    aspect-ratio: 16/9;
+    border: none;
+    border-radius: 8px;
 }
 
 #modal-overlay {

@@ -4,6 +4,9 @@
         <meta charset="utf-8"  />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Christopher Williams</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="styles.css" />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
         <meta
@@ -37,34 +40,66 @@
         </header>
 
         <main>
-            <section id="about">
-                <h2 class="about">About Me</h2>
-                <p>I am a Computer Scientist with both a Undergraduate and Graduate degree in Computer Science that is a massive enjoyer of making software and hardware that help people.
-                    I know that isn't a unique stance, and I think that is good! I want to contribute to Open Source projects and create my own projects that can have a positive effect on everyday people, 
-                    how business is conducted (hopefully more ethically), and potentially even contribute to how society functions if only a little bit.
-                </p>
+            <section id="about" class="hero-section hero-section--left">
+                <div class="hero-section__text">
+                    <h2>About Me</h2>
+                    <p>I am a Computer Scientist with both an Undergraduate and Graduate degree in Computer Science that is a massive enjoyer of making software and hardware that help people.
+                        I know that isn't a unique stance, and I think that is good! I want to contribute to Open Source projects and create my own projects that can have a positive effect on everyday people,
+                        how business is conducted (hopefully more ethically), and potentially even contribute to how society functions if only a little bit.
+                    </p>
+                </div>
+                <div class="hero-section__media">
+                    <div class="media-placeholder">Photo</div>
+                </div>
             </section>
 
-            <section id="education">
-                <h2 class="education">Education</h2>
-                <h3>Undergraduate Degree: Christopher Newport University, B.S. Computer Science, 2025.</h3>
-                <h3>Graduate Degree: Virginia Polytechnic Institute and State University, MEng Computer Science, 2026</h3>
-
-                <p>I have recieved two degrees in Computer Science from two prestigious universities where I was able to make 
-                    wonderful life-long friendships, connections with mentors and professionals, and able to develop as a computer 
-                    scientist so that I am ready to get off to a running start in the job market and world as a whole. 
-                </p>
+            <section id="education" class="hero-section hero-section--right">
+                <div class="hero-section__media">
+                    <table class="edu-table">
+                        <thead>
+                            <tr><th>Degree</th><th>Institution</th><th>Year</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>B.S. Computer Science</td>
+                                <td>Christopher Newport University</td>
+                                <td>2025</td>
+                            </tr>
+                            <tr>
+                                <td>MEng Computer Science</td>
+                                <td>Virginia Tech</td>
+                                <td>2026</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="hero-section__text">
+                    <h2>Education</h2>
+                    <p>I have received two degrees in Computer Science from two prestigious universities where I was able to make
+                        wonderful life-long friendships, connections with mentors and professionals, and develop as a computer
+                        scientist ready to hit the ground running.
+                    </p>
+                </div>
             </section>
 
-            <section id="experience">
-                <h2 class="experience">Experience</h2>
-                <h3>Student Researcher (Summer Scholars), 2023: Mobile Autonomous Robots Tracking Youth (M.A.R.T.Y)</h3>
-
-                <p>In hindsight, not a wonderful name, but in the summer between my sophomore and junior year as at CNU, 
-                    I was able to partner with a professor and conduct research on improving the path finding algorithms of 
-                    last mile food delivery robots on college campuses like Starship robots utilizing pedestrains. The 
-                    project even had a small interview done with myself and was published to YouTube. Take a look!
-                </p>
+            <section id="experience" class="hero-section hero-section--left">
+                <div class="hero-section__text">
+                    <h2>Experience</h2>
+                    <h3>Student Researcher — Summer Scholars, 2023</h3>
+                    <p>In the summer between my sophomore and junior year at CNU,
+                        I partnered with a professor to research improvements to path-finding algorithms for
+                        last-mile food delivery robots on college campuses, using pedestrian behavior data.
+                        The project was featured in a published YouTube interview.
+                    </p>
+                </div>
+                <div class="hero-section__media">
+                    <iframe
+                        class="yt-embed"
+                        src="https://www.youtube.com/embed/Ed5mFfJhe4U"
+                        title="Autonomous Delivery Gets a Helping Hand"
+                        allowfullscreen>
+                    </iframe>
+                </div>
             </section>
 
             <section id="projects">
