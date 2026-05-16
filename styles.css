@@ -134,30 +134,73 @@ section {
     letter-spacing: 0.08em;
 }
 
-/* Education table */
-.edu-table {
+/* Education pseudo-table */
+.edu-list {
+    display: flex;
+    flex-direction: column;
+    gap: 56px;
     width: 100%;
-    border-collapse: collapse;
-    font-size: 0.95em;
 }
 
-.edu-table th,
-.edu-table td {
-    padding: 14px 18px;
-    text-align: left;
-    border-bottom: 1px solid #2a2018;
+.edu-entry {
+    display: grid;
+    grid-template-columns: 110px 1fr auto;
+    align-items: center;
+    gap: 36px;
 }
 
-.edu-table thead th {
+.edu-logo-wrap {
+    width: 110px;
+    height: 110px;
+    position: relative;
+}
+
+.edu-logo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 12px;
+}
+
+.edu-logo-placeholder {
+    display: flex;
+    width: 110px;
+    height: 110px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background-color: #1e1a14;
+    border: 1px solid #3a2e22;
+    font-size: 1.2em;
+    font-weight: 600;
     color: #7a6e62;
-    font-weight: 500;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    font-size: 0.8em;
+    letter-spacing: 0.05em;
 }
 
-.edu-table tbody tr:hover {
-    background-color: #1a160e;
+.edu-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.edu-degree {
+    font-size: 1.3em;
+    font-weight: 600;
+    color: #f0ece4;
+}
+
+.edu-school {
+    font-size: 1em;
+    color: #7a6e62;
+    letter-spacing: 0.02em;
+}
+
+.edu-year {
+    font-size: 1.2em;
+    font-weight: 300;
+    color: #b0acaa;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
 }
 
 .hero {
@@ -474,6 +517,7 @@ section {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
 }
 
 #modal-overlay:not(.hidden) {
