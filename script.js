@@ -4,7 +4,7 @@ const modalTags = document.getElementById('modal-tags');
 const modalDescription = document.getElementById('modal-description');
 const modalClose = document.getElementById('modal-close');
 
-document.querySelectorAll('.project-tile').forEach(tile => {
+document.querySelectorAll('.project-tile, .hero-project-tile').forEach(tile => {
     tile.addEventListener('click', () => {
         modalTitle.textContent = tile.querySelector('h3').textContent;
         modalDescription.textContent = tile.dataset.description;
@@ -41,7 +41,7 @@ overlay.addEventListener('click', (e) => {
 });
 
 const track = document.querySelector('.carousel-track');
-const tiles = document.querySelectorAll('.project-tile');
+const tiles = document.querySelectorAll('.carousel-track .project-tile');
 const prevBtn = document.getElementById('carousel-prev');
 const nextBtn = document.getElementById('carousel-next');
 const visibleCount = 5;
