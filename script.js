@@ -3,11 +3,19 @@ const modalTitle = document.getElementById('modal-title');
 const modalTags = document.getElementById('modal-tags');
 const modalDescription = document.getElementById('modal-description');
 const modalClose = document.getElementById('modal-close');
+const modalImage = document.getElementById('modal-image');
 
 document.querySelectorAll('.project-tile, .hero-project-tile').forEach(tile => {
     tile.addEventListener('click', () => {
         modalTitle.textContent = tile.querySelector('h3').textContent;
-        modalDescription.textContent = tile.dataset.description;
+        modalDescription.innerHTML = tile.dataset.description;
+        const tileBanner = tile.querySelector('.tile-banner');
+        if (tileBanner) {
+            const bgImage = tileBanner.style.getPropertyValue('--bg-image');
+            modalImage.style.backgroundImage = bgImage || 'none';
+        } else {
+            modalImage.style.backgroundImage = 'none';
+        }
 
         modalTags.innerHTML = '';
         (tile.dataset.tags || '').split('|').forEach(entry => {
@@ -128,3 +136,21 @@ function collapseWaveFunction() {
 }
 
 qecTile.addEventListener('mouseenter', collapseWaveFunction);
+
+
+const siteName = document.querySelector('.site-nav__name');
+const heroSection = document.querySelector('header');
+
+const heroObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            siteName.style.opacity = '0';
+            siteName.style.pointerEvents = 'none';
+        } else {
+            siteName.style.opacity = '1';
+            siteName.style.pointerEvents = 'all';
+        }
+    });
+}, { threshold: 0.1 });
+
+heroObserver.observe(heroSection);

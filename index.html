@@ -28,7 +28,9 @@
 
         <header>
             <div class="project-tile hero-project-tile"
-                data-description="In collaboration with Northrop Grumman, Virginia Tech"
+                data-description="In collaboration with Northrop Grumman, Virginia Tech.<br><br> 
+                After the landmark Quantum Error Correction paper &quot;Learning high-accuracy error decoding for quantum processors &quot;, Google Deepmind and Google Quantum AI 
+                introduced AlphaQubit, a Recurrent-based Transformer Neural Network designed to perform quantum error correction on the surface code."
                 data-tags="Python:language|PyTorch(DDP):framework|Stim:library|NumPy:library|Pandas:library|matplotlib:library|TQDM:library|Docker:tool|HDF5:tool">
                 <div class="tile-banner" style="--bg-image: url('image/alphaqubit_qubit-_1920_x_1080.width-1300.png')"></div>
                 <div class="tile-content">
@@ -311,11 +313,14 @@
 
         <div id="modal-overlay" class="hidden">
             <div id="modal">
-                <h2 id="modal-title"></h2>
-                <p id="modal-description"></p>
+                <div id="modal-header">
+                    <h2 id="modal-title"></h2>
+                    <button id="modal-close" class="page-button">Close</button>
+                </div>
+                <div id="modal-image"></div>
                 <div id="modal-tags"></div>
+                <p id="modal-description"></p>
                 <a id="modal-github" href="#" target="_blank" class="page-button">GitHub</a>
-                <button id="modal-close" class="page-button">Close</button>
             </div>
         </div>
         <script src="script.js"></script>
