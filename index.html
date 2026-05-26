@@ -8,7 +8,8 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="styles.css" />
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
         <meta
             name="description"
             content="Personal blog for Christopher Williams."
@@ -18,20 +19,30 @@
         <nav class="site-nav">
             <a href="#" class="site-nav__name">Christopher Williams</a>
             <div class="site-nav__links">
+                <a href="#">Home</a>
                 <a href="#about">About Me</a>
                 <a href="#education">Education</a>
                 <a href="#experience">Experience</a>
                 <a href="#projects">Projects</a>
-                <a href="#blog">Blog</a>
+                <a href="blog.html">Blog</a>
             </div>
         </nav>
 
         <header>
             <div class="project-tile hero-project-tile"
                 data-description="In collaboration with Northrop Grumman, Virginia Tech.<br><br> 
-                After the landmark Quantum Error Correction paper &quot;Learning high-accuracy error decoding for quantum processors &quot;, Google Deepmind and Google Quantum AI 
-                introduced AlphaQubit, a Recurrent-based Transformer Neural Network designed to perform quantum error correction on the surface code."
-                data-tags="Python:language|PyTorch(DDP):framework|Stim:library|NumPy:library|Pandas:library|matplotlib:library|TQDM:library|Docker:tool|HDF5:tool">
+                After the landmark Quantum Error Correction (QEC) paper &quot;Learning high-accuracy error decoding for quantum processors &quot;, Google Deepmind and Google Quantum AI 
+                introduced AlphaQubit, a Recurrent-based Transformer Neural Network designed to perform quantum error correction on the surface code. Their new model combined a fascinating architecture 
+                of neural networks and Transformers to create a model that could track relationships over space and time between stabilizers and correct those errors.<br><br>
+                This project, proposed by Northrop Grumman through Virginia Tech, was a year long project aiming to recreate the results from the AlphaQubit paper and potentially push it further, 
+                extending capability of the model to other quantum codes such as the surface code.<br><br>
+                Over the course of our project, we were able to achieve results better than the baseline QEC method, Minimum Weight Perfect Matching (MWPM), on a distance 3 surface code. Unforunately, we 
+                were unable to extend the models capabilities to larger surface codes nor other quantum codes, but this project taught myself and my team an immense amount about Quantum Computing, Quantum 
+                Error Correction, Neural Networks and Transformers, the intricacies of PyTorch and DDP, and many other concepts, fields, and tools. <br><br>
+                This project has motivated me beyond Machine Learning, Artificial Intelligence, and Computer Science, but instead to combine those interests as well as my love for physics 
+                to pursue Quantum Computing and bring about the next frontier of technology."
+                data-tags="Python:language|PyTorch(DDP):framework|Stim:library|NumPy:library|Pandas:library|matplotlib:library|TQDM:library|Docker:tool|HDF5:tool"
+                data-github="https://github.com/PrismaticFlame/qec_decoder_transformer">
                 <div class="tile-banner" style="--bg-image: url('image/alphaqubit_qubit-_1920_x_1080.width-1300.png')"></div>
                 <div class="tile-content">
                     <h3>Quantum Error Correction Decoder</h3>
@@ -55,9 +66,15 @@
                 <p class="hero-blurb"><strong>Machine Learning</strong> and <strong>Quantum Computing</strong> Software Engineer.</p>
                 <p class="hero-status">MEng Computer Science &nbsp;·&nbsp; VA, USA &nbsp;·&nbsp; Available 2026</p>
                 <div class="hero-links">
-                    <a href="https://github.com/PrismaticFlame" class="hero-link" target="_blank">GitHub</a>
-                    <a href="https://www.linkedin.com/in/cdrakewilliams/" class="hero-link" target="_blank">LinkedIn</a>
-                    <a href="assets/CDW_Resume_04-26_no_refs.pdf" class="hero-link" download>Resume</a>
+                    <a href="https://github.com/PrismaticFlame" class="hero-icon-link" target="_blank" title="GitHub">
+                        <i class="devicon-github-original"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/cdrakewilliams/" class="hero-icon-link" target="_blank" title="LinkedIn">
+                        <i class="devicon-linkedin-plain"></i>
+                    </a>
+                    <a href="assets/CDW_Resume_04-26_no_refs.pdf" class="hero-icon-link" download title="Resume">
+                        <i class="fa-solid fa-file-lines"></i>
+                    </a>
                 </div>
             </div>
 
@@ -105,9 +122,9 @@
             <section id="about" class="hero-section hero-section--left">
                 <div class="hero-section__text">
                     <h2>About Me</h2>
-                    <p>I am a Computer Scientist with both an Undergraduate and Graduate degree in Computer Science that is a massive enjoyer of making software and hardware that help people.
-                        I know that isn't a unique stance, and I think that is good! I want to contribute to Open Source projects and create my own projects that can have a positive effect on everyday people,
-                        how business is conducted (hopefully more ethically), and potentially even contribute to how society functions if only a little bit.
+                    <p>I am a Computer Scientist with both an Undergraduate and Graduate degree in Computer Science that is a massive enjoyer of making software that help people.
+                        I know that isn't a unique stance, and I think that is good! I want to contribute to Open Source, create projects that have a positive effect on people,
+                        how business is conducted (hopefully more ethically), and contribute to how society functions.
                     </p>
                 </div>
                 <div class="hero-section__media">
@@ -175,7 +192,20 @@
                     <button class="carousel-btn" id="carousel-prev">&#8249;</button>
                     <div class="carousel-track-wrapper">
                         <div class="carousel-track">
-                            <div class="project-tile" id="qec-tile" data-description="In collaboration with Northrop Grumman, Virginia Tech" data-tags="Python:language|PyTorch(DDP):framework|Stim:library|NumPy:library|Pandas:library|matplotlib:library|TQDM:library|Docker:tool|HDF5:tool">
+                            <div class="project-tile" id="qec-tile" 
+                            data-description="In collaboration with Northrop Grumman, Virginia Tech.<br><br> 
+                            After the landmark Quantum Error Correction (QEC) paper &quot;Learning high-accuracy error decoding for quantum processors &quot;, Google Deepmind and Google Quantum AI 
+                            introduced AlphaQubit, a Recurrent-based Transformer Neural Network designed to perform quantum error correction on the surface code. Their new model combined a fascinating architecture 
+                            of neural networks and Transformers to create a model that could track relationships over space and time between stabilizers and correct those errors.<br><br>
+                            This project, proposed by Northrop Grumman through Virginia Tech, was a year long project aiming to recreate the results from the AlphaQubit paper and potentially push it further, 
+                            extending capability of the model to other quantum codes such as the surface code.<br><br>
+                            Over the course of our project, we were able to achieve results better than the baseline QEC method, Minimum Weight Perfect Matching (MWPM), on a distance 3 surface code. Unforunately, we 
+                            were unable to extend the models capabilities to larger surface codes nor other quantum codes, but this project taught myself and my team an immense amount about Quantum Computing, Quantum 
+                            Error Correction, Neural Networks and Transformers, the intricacies of PyTorch and DDP, and many other concepts, fields, and tools. <br><br>
+                            This project has motivated me beyond Machine Learning, Artificial Intelligence, and Computer Science, but instead to combine those interests as well as my love for physics 
+                            to pursue Quantum Computing and bring about the next frontier of technology." 
+                            data-tags="Python:language|PyTorch(DDP):framework|Stim:library|NumPy:library|Pandas:library|matplotlib:library|TQDM:library|Docker:tool|HDF5:tool"
+                            data-github="https://github.com/PrismaticFlame/qec_decoder_transformer">
                                 <div class="tile-banner" style="--bg-image: url('image/alphaqubit_qubit-_1920_x_1080.width-1300.png')"></div>
                                 <div class="tile-content">
                                     <div class="superposition-wrapper">
