@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 110" fill="none" stroke="#1f2937" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Globe -->
+  <circle cx="70" cy="70" r="30"/>
+  <ellipse cx="70" cy="70" rx="30" ry="10"/>
+  <path d="M70 40 L70 100" />
+
+  <!-- Migration arc from outside-left to outside-right -->
+  <path d="M14 70 Q 70 -8 126 70" stroke-width="3"/>
+  <!-- Arrowhead at right endpoint, oriented along the descending tangent -->
+  <path d="M122 58 L126 70 L114 68" stroke-width="3"/>
+
+  <!-- Origin pin (left, no arrowhead) -->
+  <circle cx="14" cy="70" r="4" fill="#1f2937" stroke="none"/>
+
+  <!-- Currency symbols along the arc -->
+  <text x="32" y="40" font-family="Georgia, 'Times New Roman', serif" font-size="15" font-weight="700" fill="#1f2937" stroke="none">$</text>
+  <text x="64" y="20" font-family="Georgia, 'Times New Roman', serif" font-size="15" font-weight="700" fill="#1f2937" stroke="none">€</text>
+  <text x="96" y="40" font-family="Georgia, 'Times New Roman', serif" font-size="15" font-weight="700" fill="#1f2937" stroke="none">¥</text>
+</svg>

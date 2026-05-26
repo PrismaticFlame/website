@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 100" fill="none" stroke="#1f2937" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Small modest house on the left -->
+  <path d="M8 88 L8 56 L26 42 L44 56 L44 88 Z"/>
+  <!-- Door -->
+  <path d="M22 88 L22 72 L30 72 L30 88"/>
+  <!-- Small window -->
+  <rect x="34" y="62" width="6" height="6"/>
+
+  <!-- Transformation arrow -->
+  <path d="M52 64 L66 64"/>
+  <path d="M61 60 L66 64 L61 68"/>
+
+  <!-- Large house with attached garage on the right -->
+  <!-- Main house body -->
+  <path d="M72 88 L72 50 L94 32 L116 50 L116 88 Z"/>
+  <!-- Front door -->
+  <path d="M88 88 L88 70 L100 70 L100 88"/>
+  <!-- Upper window -->
+  <rect x="88" y="52" width="12" height="10"/>
+  <!-- Attached garage on the right (lower roofline) -->
+  <path d="M116 88 L116 62 L122 56 L132 56 L132 88 Z"/>
+  <!-- Garage door with horizontal panel lines -->
+  <rect x="119" y="66" width="10" height="20"/>
+  <line x1="119" y1="72" x2="129" y2="72"/>
+  <line x1="119" y1="78" x2="129" y2="78"/>
+
+  <!-- Upward trend mark above -->
+  <polyline points="78,22 92,14 104,18 116,8"/>
+  <polyline points="110,8 116,8 116,14"/>
+</svg>
